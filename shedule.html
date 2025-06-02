@@ -1,12 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="author" content="Dariyanna">
-  <title>Schedule - English School</title>
+  <title>Розклад - Школа англійської мови</title>
+  <style>
+    body {
+      background-color: #f5f5ff;
+      font-family: Georgia, serif;
+      color: #222;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid gray;
+      padding: 10px;
+    }
+    th {
+      background-color: #ccc;
+    }
+  </style>
 </head>
 <body>
-  <h1>Class Schedule</h1>
-  <a href="index.html">Back to Home</a>
+
+  <h1>Розклад занять</h1>
+  <p><a href="index.html">На головну</a></p>
+
+  <table>
+    <caption>Тижневий розклад</caption>
+    <tr>
+      <th>Група</th>
+      <th>День</th>
+      <th>Час</th>
+      <th>Викладач</th>
+    </tr>
+    <tr>
+      <td rowspan="2">Початкова</td>
+      <td>Понеділок</td>
+      <td>10:00</td>
+      <td>Олена Іванова</td>
+    </tr>
+    <tr>
+      <td>Середа</td>
+      <td>10:00</td>
+      <td>Олена Іванова</td>
+    </tr>
+    <tr>
+      <td>Середній рівень</td>
+      <td colspan="2">Вівторок і Четвер, 16:00</td>
+      <td>John Smith</td>
+    </tr>
+    <tr>
+      <td>Просунутий</td>
+      <td>П’ятниця</td>
+      <td>18:00</td>
+      <td>Mary Johnson</td>
+    </tr>
+  </table>
+
+  <h2>Онлайн-уроки</h2>
+  <p>Проводяться на платформі <a href="https://zoom.us" target="_blank">Zoom</a>. Посилання надсилається на пошту студентів.</p>
+
 </body>
 </html>
