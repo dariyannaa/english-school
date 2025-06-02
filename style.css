@@ -1,90 +1,141 @@
-/* Зброс відступів і паддингів */
+/* Загальні скидання */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Стиль для тіла сторінки */
+/* Стилі для тіла сторінки */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f8ff; /* фон */
+  background: url('background.jpg') no-repeat center center fixed, linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+  background-size: cover;
   color: #333;
-  line-height: 1.6;
-  text-align: left;
+  text-align: center;
   padding: 20px;
 }
 
-/* Заголовки h1, h2, h3 */
+/* Заголовки */
 h1, h2, h3 {
-  font-size: 24px;
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+}
+
+/* Заголовок з id */
+#main-title {
+  font-size: 28px;
   color: #004080;
-  line-height: 1.4;
+}
+
+/* Навігація */
+nav {
+  background-color: #004080;
+  padding: 15px;
   text-align: center;
 }
 
-/* Унікальний ідентифікатор для заголовка */
-#main-title {
-  font-size: 32px;
-  color: #00264d;
-  text-transform: uppercase;
+/* Дочірній селектор — тільки прямі ul всередині nav */
+nav > ul {
+  border-bottom: 2px solid white;
 }
 
-/* Посилання */
+/* Список у навігації */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Пункти меню */
+nav ul li {
+  margin: 0 15px;
+}
+
+/* Контекстний селектор — посилання всередині nav ul li */
+nav ul li a {
+  font-style: italic;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: color 0.3s, background 0.3s;
+}
+
+/* Ховер ефект для посилань у навігації */
+nav ul li a:hover {
+  color: #ffcc00;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Загальні посилання */
 a {
   color: red !important;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
+/* Ховер для звичайних посилань */
 a:hover {
   color: #cc5500 !important;
   text-decoration: underline;
 }
 
-/* Стиль рівня документа для посилань — внутрішній стиль в HTML */
-
-/* Абзац з внутрішнім стилем - додай клас special у HTML */
-p.special {
-  color: blue !important;
-  font-size: 20px !important;
-  font-weight: 600;
-  text-align: justify;
+/* Сусідній селектор — абзац, що йде одразу після h1 */
+h1 + p {
+  font-weight: bold;
+  color: darkblue;
 }
 
-/* Марковані списки */
+/* Абзаци */
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* Спеціальний клас для тексту */
+.special-text {
+  color: blue !important;
+  font-size: 20px;
+}
+
+/* Списки */
+ul, ol {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin: 20px;
+  padding-left: 25px;
+}
+
+/* Маркери для ul і ol */
 ul {
   list-style-type: square;
-  font-size: 18px;
-  color: #333;
-  margin: 20px 0 20px 40px;
-  padding-left: 0;
 }
 
-/* Нумеровані списки */
 ol {
   list-style-type: decimal;
-  font-size: 18px;
-  color: #333;
-  margin: 20px 0 20px 40px;
-  padding-left: 0;
 }
 
-/* Пункти списків */
+/* Відступи між пунктами списку */
 ul li, ol li {
   margin-bottom: 10px;
 }
 
-/* Списки визначень */
+/* Описові списки */
 dl {
   background: #f8f9fa;
   padding: 15px;
   border-left: 5px solid #004080;
   max-width: 600px;
   margin: 20px auto;
-  font-size: 16px;
-  color: #555;
 }
 
 dt {
@@ -95,7 +146,8 @@ dt {
 
 dd {
   margin-left: 20px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
 }
 
 /* Таблиці */
@@ -106,7 +158,7 @@ table {
   background-color: #fff;
   font-size: 16px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
@@ -120,10 +172,62 @@ th {
   font-size: 18px;
 }
 
+/* Чітка фонова заливка для парних рядків */
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
+/* Підсвічування рядка таблиці при наведенні */
 tr:hover {
   background-color: #ddd;
+}
+
+/* Зображення */
+img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+/* Різні класи для розмірів зображень */
+.resized-img {
+  width: 400px;
+  height: 300px;
+}
+
+.full-img {
+  width: 800px;
+  height: 600px;
+}
+
+.additional-img {
+  width: 500px;
+  height: 350px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Футер */
+#footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* Дочірні селектори */
+section > h2 {
+  text-decoration: underline;
 }
