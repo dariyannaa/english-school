@@ -1,0 +1,129 @@
+/* Зброс відступів і паддингів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Стиль для тіла сторінки */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff; /* фон */
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+  padding: 20px;
+}
+
+/* Заголовки h1, h2, h3 */
+h1, h2, h3 {
+  font-size: 24px;
+  color: #004080;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Унікальний ідентифікатор для заголовка */
+#main-title {
+  font-size: 32px;
+  color: #00264d;
+  text-transform: uppercase;
+}
+
+/* Посилання */
+a {
+  color: red !important;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #cc5500 !important;
+  text-decoration: underline;
+}
+
+/* Стиль рівня документа для посилань — внутрішній стиль в HTML */
+
+/* Абзац з внутрішнім стилем - додай клас special у HTML */
+p.special {
+  color: blue !important;
+  font-size: 20px !important;
+  font-weight: 600;
+  text-align: justify;
+}
+
+/* Марковані списки */
+ul {
+  list-style-type: square;
+  font-size: 18px;
+  color: #333;
+  margin: 20px 0 20px 40px;
+  padding-left: 0;
+}
+
+/* Нумеровані списки */
+ol {
+  list-style-type: decimal;
+  font-size: 18px;
+  color: #333;
+  margin: 20px 0 20px 40px;
+  padding-left: 0;
+}
+
+/* Пункти списків */
+ul li, ol li {
+  margin-bottom: 10px;
+}
+
+/* Списки визначень */
+dl {
+  background: #f8f9fa;
+  padding: 15px;
+  border-left: 5px solid #004080;
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 16px;
+  color: #555;
+}
+
+dt {
+  font-weight: bold;
+  color: #004080;
+  margin-top: 10px;
+}
+
+dd {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* Таблиці */
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #003366;
+  color: white;
+  font-size: 18px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
