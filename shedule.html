@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Розклад - Школа англійської мови</title>
   <style>
     body {
-      background-color: #f5f5ff;
-      font-family: Georgia, serif;
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
       color: #222;
+      margin: 20px;
+    }
+    h1 {
+      color: #004080;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     table {
       width: 100%;
       border-collapse: collapse;
+      margin-top: 20px;
     }
     th, td {
-      border: 1px solid gray;
+      border: 1px solid #999;
       padding: 10px;
+      text-align: center;
     }
     th {
-      background-color: #ccc;
+      background-color: #cce6ff;
+    }
+    img {
+      width: 100px;
+      height: auto;
+      cursor: pointer;
+      border: 2px solid #004080;
+      border-radius: 5px;
+    }
+    .nav {
+      margin-bottom: 15px;
     }
   </style>
 </head>
 <body>
 
   <h1>Розклад занять</h1>
-  <p><a href="index.html">На головну</a></p>
+
+  <nav class="nav">
+    <a href="index.html">Головна</a> |
+    <a href="about.html">Про нас</a> |
+    <a href="contact.html">Контакти</a>
+  </nav>
 
   <table>
-    <caption>Тижневий розклад</caption>
+    <caption><strong>Тижневий розклад груп</strong></caption>
     <tr>
       <th>Група</th>
       <th>День</th>
@@ -39,7 +67,12 @@
       <td rowspan="2">Початкова</td>
       <td>Понеділок</td>
       <td>10:00</td>
-      <td>Олена Іванова</td>
+      <td>
+        <a href="teacher1.jpg" target="_blank" title="Викладач Олена Іванова">
+          <img src="teacher1_small.jpg" alt="Олена Іванова" />
+        </a>
+        <br>Олена Іванова
+      </td>
     </tr>
     <tr>
       <td>Середа</td>
@@ -49,16 +82,27 @@
     <tr>
       <td>Середній рівень</td>
       <td colspan="2">Вівторок і Четвер, 16:00</td>
-      <td>John Smith</td>
+      <td>
+        <a href="teacher2.jpg" target="_blank" title="Викладач John Smith">
+          <img src="teacher2_small.jpg" alt="John Smith" />
+        </a>
+        <br>John Smith
+      </td>
     </tr>
     <tr>
       <td>Просунутий</td>
       <td>П’ятниця</td>
       <td>18:00</td>
-      <td>Mary Johnson</td>
+      <td>
+        <a href="teacher3.jpg" target="_blank" title="Викладач Mary Johnson">
+          <img src="teacher3_small.jpg" alt="Mary Johnson" />
+        </a>
+        <br>Mary Johnson
+      </td>
     </tr>
   </table>
 
+  <p>Плануємо додаткові курси — слідкуйте за оновленнями!</p>
 
 </body>
 </html>
