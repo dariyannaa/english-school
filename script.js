@@ -83,7 +83,7 @@ infoDiv.innerHTML = `
 
 // Робота з document.createElement, createTextNode, node.append/prepend/after/replace/remove
 let newPara = document.createElement("p");
-let text = document.createTextNode("Цей текст створено за допомогою JS.");
+let text = document.createTextNode("London is the capital of UK");
 newPara.appendChild(text);
 document.body.append(newPara);
 
