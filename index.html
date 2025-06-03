@@ -2,83 +2,74 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Школа англійської мови "English Star"</title>
+  <title>Школа англійської мови</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+
+  <!-- Стиль рівня документа (перевизначення стилю для посилань) -->
+  <style>
+    a {
+      color: darkred !important;
+      font-style: italic !important;
+    }
+  </style>
 </head>
 <body>
+  <h1 id="main-title">Ласкаво просимо до школи англійської мови</h1>
 
-  <header>
-    <h1>Школа англійської мови "English Star"</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="schedule.html">Розклад</a></li>
-        <li><a href="contact.html">Контакти</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Абзац з внутрішнім стилем і !important -->
+  <p style="color: green !important; font-size: 20px !important;">
+    Це абзац із внутрішнім стилем, який має найвищий пріоритет.
+  </p>
 
-  <div id="info-box">
-    <h3>Корисна інформація</h3>
-    <p>Курси проходять у зручний для вас час!</p>
-  </div>
+  <!-- Посилання -->
+  <p>Відвідайте нашу <a href="courses.html">сторінку курсів</a>.</p>
 
-  
-
-  <p>Ми пропонуємо <b>сучасні методики</b> навчання англійської мови для <i>дітей</i>, <i>підлітків</i> та <i>дорослих</i>.</p>
-
-  <p><a href="https://www.cambridgeenglish.org" target="_blank">Перевірити свій рівень англійської на Cambridge English</a></p>
-
-  <h2>Наші переваги</h2>
-  <ul type="circle">
-    <li>Досвідчені викладачі</li>
-    <li>Інтерактивні заняття</li>
-    <li>Міжнародні сертифікати</li>
-  </ul>
-
-  <ol type="A">
-    <li>Базовий рівень</li>
+  <!-- Списки -->
+  <h2>Наші курси:</h2>
+  <ul>
+    <li>Початковий рівень</li>
     <li>Середній рівень</li>
     <li>Підготовка до іспитів</li>
+  </ul>
+
+  <h2>Етапи навчання:</h2>
+  <ol>
+    <li>Реєстрація</li>
+    <li>Тестування</li>
+    <li>Заняття</li>
   </ol>
 
+  <h2>Чому обирають нас:</h2>
   <dl>
-    <dt>TOEFL</dt>
-    <dd>Міжнародний тест для вступу до закордонних ВНЗ</dd>
-    <dt>IELTS</dt>
-    <dd>Інший міжнародний іспит з англійської</dd>
+    <dt>Досвідчені викладачі</dt>
+    <dd>Сертифіковані спеціалісти з міжнародним досвідом.</dd>
+    <dt>Індивідуальний підхід</dt>
+    <dd>Персоналізовані програми навчання.</dd>
   </dl>
 
-  <h2>Розширена таблиця</h2>
-  <table cellpadding="10" cellspacing="2">
-    <colgroup>
-      <col span="2" style="background-color:#f2f2f2">
-      <col style="background-color:#e6f7ff">
-    </colgroup>
+  <!-- Таблиця -->
+  <h2>Розклад занять</h2>
+  <table>
     <tr>
-      <th colspan="3">Розклад груп</th>
+      <th>День</th>
+      <th>Час</th>
+      <th>Група</th>
     </tr>
     <tr>
-      <td rowspan="2">Група А</td>
       <td>Понеділок</td>
-      <td>10:00 - 11:30</td>
+      <td>10:00 - 12:00</td>
+      <td>Початковий</td>
     </tr>
     <tr>
       <td>Середа</td>
-      <td>12:00 - 13:30</td>
+      <td>14:00 - 16:00</td>
+      <td>Середній</td>
+    </tr>
+    <tr>
+      <td>П’ятниця</td>
+      <td>18:00 - 20:00</td>
+      <td>Підготовка до іспитів</td>
     </tr>
   </table>
-
-  <h2>Інтерактив</h2>
-  <button id="btn-dialog">Діалог з користувачем</button>
-  <button onclick="showDeveloperInfo('Плєшкова', 'Дарія')">Про розробника</button>
-  <button onclick="compareStrings()">Порівняти рядки</button>
-  <button id="btn-change-bg">Змінити фон на 30 сек</button>
-  <button id="btn-redirect">Перехід на іншу сторінку</button>
-
-  <div id="info"></div>
-
 </body>
 </html>

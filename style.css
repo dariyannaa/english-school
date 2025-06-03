@@ -7,8 +7,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: url('background.jpg') no-repeat center center fixed, linear-gradient(to bottom, #f0f8ff, #e6f2ff);
-  background-size: cover;
+  background-color: #e6f2ff;
   color: #333;
   text-align: center;
   padding: 20px;
@@ -21,54 +20,18 @@ h1, h2, h3 {
   text-align: center !important;
 }
 
-/* Головний заголовок */
 #main-title {
   font-size: 28px;
   color: #004080;
 }
 
-/* Навігація */
-nav {
-  background-color: #004080;
-  padding: 15px;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 8px 12px;
-  transition: color 0.3s, background 0.3s;
-}
-
-/* Псевдокласи для посилань */
-nav a:hover {
-  color: #084050;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-}
-
-/* Основні посилання */
+/* Посилання */
 a {
   color: rgb(89, 45, 194);
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Псевдокласи посилань */
 a:link {
   color: rgb(89, 45, 194);
 }
@@ -86,18 +49,8 @@ a:active {
   color: rgb(72, 150, 218);
 }
 
-/* Параграфи */
-p {
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: justify;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 15px;
-}
-
 /* Списки */
-ul, ol {
+ul, ol, dl {
   font-size: 18px;
   line-height: 1.6;
   color: #333;
@@ -113,78 +66,16 @@ ol {
   list-style-type: decimal;
 }
 
-ul li, ol li {
+ul li, ol li, dl dt, dl dd {
   margin-bottom: 10px;
 }
 
-/* Перший елемент списку - псевдоклас :first-child */
 ul li:first-child {
   font-weight: bold;
   background-color: #cce6ff;
 }
 
-/* Псевдоелементи для заголовків h3 */
-h3::before {
-  content: "✈ ";
-  color: navy;
-}
-
-h3::after {
-  content: " ✈";
-  color: navy;
-}
-
-/* Рядковий елемент - span */
-.highlight {
-  color: rgb(84, 124, 226);
-  font-weight: bold;
-  background-color: rgb(135, 203, 224);
-  padding: 0 5px;
-  border-radius: 3px;
-}
-
-/* Блочний елемент з позиціонуванням */
-#info-box {
-  position: relative;
-  top: 10px;
-  left: 15px;
-  background-color: #e0f7fa;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #00acc1;
-}
-
-/* Плаваючі блоки */
-/* Зліва */
-.float-left {
-  float: left;
-  margin-right: 20px;
-  border: 1px solid #ccc;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-/* Справа */
-.float-right {
-  float: right;
-  width: 250px;
-  background-color: #f9f9f9;
-  border: 1px solid #aaa;
-  padding: 10px;
-  margin-left: 20px;
-  border-radius: 5px;
-  text-align: left;
-}
-
-/* Очистка float, щоб контент не "спливав" */
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* Таблиці (якщо будеш використовувати) */
+/* Таблиці */
 table {
   width: 90%;
   margin: 30px auto;
@@ -212,40 +103,4 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #ddd;
-}
-
-/* Зображення */
-img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
-}
-
-img:hover {
-  transform: scale(1.1);
-}
-
-/* Контекстний селектор */
-nav ul li a {
-  font-style: italic;
-}
-
-/* Сусідній селектор */
-h1 + p {
-  font-weight: bold;
-  color: darkblue;
-}
-
-/* Дочірній селектор */
-nav > ul {
-  border-bottom: 2px solid white;
-}
-
-section > h2 {
-  text-decoration: underline;
 }
