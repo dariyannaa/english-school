@@ -2,20 +2,8 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Головна - Школа англійської мови</title>
+  <title>Школа англійської мови</title>
   <link rel="stylesheet" href="style.css">
-
-  <script>
-    alert("Ласкаво просимо до школи English Star!");
-    const name = prompt("Як вас звати?");
-    const likes = confirm("Чи хочете вивчати англійську з нами?");
-    if (likes) {
-      alert(`Раді вас вітати, ${name}!`);
-    } else {
-      alert("Можливо, ви зміните свою думку :)");
-    }
-  </script>
-
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -37,83 +25,14 @@
     <p>Курси проходять у зручний для вас час!</p>
   </div>
 
-  <img src="english-class.jpg" alt="Англійський клас" class="float-left small">
+  <div id="info"></div>
 
-  <p>Ми пропонуємо <b>сучасні методики</b> навчання англійської мови для <i>дітей</i>, <i>підлітків</i> та <i>дорослих</i>.</p>
-
-  <p><a href="https://www.cambridgeenglish.org" target="_blank">Перевірити свій рівень англійської на Cambridge English</a></p>
-
-  <h2>Наші переваги</h2>
-  <ul type="circle">
-    <li>Досвідчені викладачі</li>
-    <li>Інтерактивні заняття</li>
-    <li>Міжнародні сертифікати</li>
-  </ul>
-
-  <ol type="A">
-    <li>Базовий рівень</li>
-    <li>Середній рівень</li>
-    <li>Підготовка до іспитів</li>
-  </ol>
-
-  <dl>
-    <dt>TOEFL</dt>
-    <dd>Міжнародний тест для вступу до закордонних ВНЗ</dd>
-    <dt>IELTS</dt>
-    <dd>Інший міжнародний іспит з англійської</dd>
-  </dl>
-
-  <h2>Розширена таблиця</h2>
-  <table cellpadding="10" cellspacing="2">
-    <colgroup>
-      <col span="2" style="background-color:#f2f2f2">
-      <col style="background-color:#e6f7ff">
-    </colgroup>
-    <tr>
-      <th colspan="3">Розклад груп</th>
-    </tr>
-    <tr>
-      <td rowspan="2">Група А</td>
-      <td>Понеділок</td>
-      <td>10:00 - 11:30</td>
-    </tr>
-    <tr>
-      <td>Середа</td>
-      <td>12:00 - 13:30</td>
-    </tr>
-  </table>
-
-  <!-- Кнопки для виклику JS-функцій -->
   <h2>Інтерактив</h2>
-  <button onclick="dialog()">Діалог з користувачем</button>
-  <button onclick="showDeveloper('Плєшкова', 'Дарія')">Про розробника</button>
+  <button id="btn-dialog">Діалог з користувачем</button>
+  <button onclick="showDeveloperInfo('Іваненко', 'Ольга')">Про розробника</button>
   <button onclick="compareStrings()">Порівняти рядки</button>
-  <button onclick="changeBackground()">Змінити фон на 30 сек</button>
-  <button onclick="redirect()">Перехід на іншу сторінку</button>
-
-</body>
-</html>
-
-    document.getElementById('btn-change-bg').addEventListener('click', function() {
-      changeBackgroundFor30sec();
-    });
-
-    document.getElementById('btn-redirect').addEventListener('click', function() {
-      redirectTo('https://www.google.com');
-    });
-
-    document.getElementById('btn-dialog').addEventListener('click', function() {
-      userDialog();
-    });
-
-    // Зміни з використанням getElementById та querySelectorAll
-    let infoDiv = document.getElementById('info');
-    let buttons = document.querySelectorAll('button');
-    infoDiv.innerHTML = `<p>Кількість кнопок на сторінці: ${buttons.length}</p>`;
-  </script>
-
-  <!-- Підключення зовнішнього скрипта -->
-  <script src="script.js"></script>
+  <button id="btn-change-bg">Змінити фон на 30 сек</button>
+  <button id="btn-redirect">Перехід на іншу сторінку</button>
 
 </body>
 </html>
