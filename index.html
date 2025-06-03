@@ -1,117 +1,67 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-
-  <title>Головна - Школа англійської мови</title>
+  <meta charset="UTF-8" />
+  <title>JavaScript Практика</title>
   <style>
     body {
-      background-color: #f0f8ff;
       font-family: Arial, sans-serif;
-      color: #333;
     }
-    a {
-      color: darkblue;
-    }
-    .highlight {
-      font-style: italic;
-      font-weight: bold;
-      font-size: 20px;
-      color: green;
-      text-align: center;
-    }
-    img.small {
-      width: 150px;
-      height: 100px;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    th {
-      background-color: #add8e6;
-    }
-    th, td {
-      border: 1px solid #999;
+    #info {
+      margin-top: 20px;
+      border: 1px solid #ccc;
       padding: 10px;
-      text-align: center;
-    }
-    iframe {
-      float: right;
-      margin: 10px;
+      background: #f9f9f9;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <body>
+  <h1>Практична робота з JavaScript</h1>
 
-  <header>
-    <h1>Школа англійської мови "English Star"</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="schedule.html">Розклад</a></li>
-        <li><a href="contact.html">Контакти</a></li>
-      </ul>
-    </nav>
-  </header>
+  <button id="btn-dialog">Почати діалог</button>
+  <button id="btn-info">Показати інформацію про розробника</button>
+  <button id="btn-compare">Порівняти рядки</button>
+  <button id="btn-change-bg">Змінити фон на 30 секунд</button>
+  <button id="btn-redirect">Перенаправити</button>
 
-  <div id="info-box">
-    <h3>Корисна інформація</h3>
-    <p>Курси проходять у зручний для вас час!</p>
-  </div>
+  <div id="info"></div>
 
-  <img src="english-class.jpg" alt="Англійський клас" class="float-left small">
+  <script>
+    // Внутрішній скрипт із alert, prompt, confirm
+    document.getElementById('btn-info').addEventListener('click', function() {
+      // Виклик функції з зовнішнього файлу
+      showDeveloperInfo('Іванов', 'Іван', 'Розробник');
+      // Виклик без параметру посади
+      showDeveloperInfo('Петренко', 'Петро');
+    });
 
-  <p>Ми пропонуємо <b>сучасні методики</b> навчання англійської мови для <i>дітей</i>, <i>підлітків</i> та <i>дорослих</i>.</p>
+    document.getElementById('btn-compare').addEventListener('click', function() {
+      let str1 = prompt('Введіть перший рядок:');
+      let str2 = prompt('Введіть другий рядок:');
+      compareStrings(str1, str2);
+    });
 
-  <p><a href="https://www.cambridgeenglish.org" target="_blank">Перевірити свій рівень англійської на Cambridge English</a></p>
+    document.getElementById('btn-change-bg').addEventListener('click', function() {
+      changeBackgroundFor30sec();
+    });
 
-  <h2>Наші переваги</h2>
+    document.getElementById('btn-redirect').addEventListener('click', function() {
+      redirectTo('https://www.google.com');
+    });
 
-  <ul type="circle">
-    <li>Досвідчені викладачі</li>
-    <li>Інтерактивні заняття</li>
-    <li>Міжнародні сертифікати</li>
-  </ul>
+    document.getElementById('btn-dialog').addEventListener('click', function() {
+      userDialog();
+    });
 
-  <ol type="A">
-    <li>Базовий рівень</li>
-    <li>Середній рівень</li>
-    <li>Підготовка до іспитів</li>
-  </ol>
+    // Зміни з використанням getElementById та querySelectorAll
+    let infoDiv = document.getElementById('info');
+    let buttons = document.querySelectorAll('button');
+    infoDiv.innerHTML = `<p>Кількість кнопок на сторінці: ${buttons.length}</p>`;
+  </script>
 
-  <dl>
-    <dt>TOEFL</dt>
-    <dd>Міжнародний тест для вступу до закордонних ВНЗ</dd>
-    <dt>IELTS</dt>
-    <dd>Інший міжнародний іспит з англійської</dd>
-  </dl>
-
-  <h2>Розширена таблиця</h2>
-  <table cellpadding="10" cellspacing="2">
-    <colgroup>
-      <col span="2" style="background-color:#f2f2f2">
-      <col style="background-color:#e6f7ff">
-    </colgroup>
-    <tr>
-      <th colspan="3">Розклад груп</th>
-    </tr>
-    <tr>
-      <td rowspan="2">Група А</td>
-      <td>Понеділок</td>
-      <td>10:00 - 11:30</td>
-    </tr>
-    <tr>
-      <td>Середа</td>
-      <td>12:00 - 13:30</td>
-    </tr>
-  </table>
+  <!-- Підключення зовнішнього скрипта -->
+  <script src="script.js"></script>
 
 </body>
-
 </html>
