@@ -1,5 +1,6 @@
- {
-    margin: 0;
+/* Загальні стилі */
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -13,25 +14,24 @@ body {
   padding: 20px;
 }
 
+/* Заголовки */
 h1, h2, h3 {
   font-size: 24px !important;
   line-height: 1.5 !important;
   text-align: center !important;
 }
 
+/* Головний заголовок */
 #main-title {
   font-size: 28px;
   color: #004080;
 }
 
+/* Навігація */
 nav {
   background-color: #004080;
   padding: 15px;
   text-align: center;
-}
-
-nav > ul {
-  border-bottom: 2px solid white;  /* дочірній селектор */
 }
 
 nav ul {
@@ -45,8 +45,7 @@ nav ul li {
   margin: 0 15px;
 }
 
-nav ul li a {
-  font-style: italic;  /* контекстний селектор */
+nav a {
   color: white;
   text-decoration: none;
   font-size: 18px;
@@ -55,29 +54,39 @@ nav ul li a {
   transition: color 0.3s, background 0.3s;
 }
 
-nav ul li a:hover {
-  color: #ffcc00;
+/* Псевдокласи для посилань */
+nav a:hover {
+  color: #084050;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
 }
 
+/* Основні посилання */
 a {
-  color: red !important;
+  color: rgb(89, 45, 194);
   text-decoration: none;
   font-weight: bold;
 }
 
+/* Псевдокласи посилань */
+a:link {
+  color: rgb(89, 45, 194);
+}
+
+a:visited {
+  color: gray;
+}
+
 a:hover {
-  color: #cc5500 !important;
+  color: blue;
   text-decoration: underline;
 }
 
-/* сусідній селектор */
-h1 + p {
-  font-weight: bold;
-  color: darkblue;
+a:active {
+  color: rgb(72, 150, 218);
 }
 
+/* Параграфи */
 p {
   font-size: 18px;
   line-height: 1.6;
@@ -87,11 +96,7 @@ p {
   padding: 0 15px;
 }
 
-.special-text {
-  color: blue !important;
-  font-size: 20px;
-}
-
+/* Списки */
 ul, ol {
   font-size: 18px;
   line-height: 1.6;
@@ -112,26 +117,74 @@ ul li, ol li {
   margin-bottom: 10px;
 }
 
-dl {
-  background: #f8f9fa;
-  padding: 15px;
-  border-left: 5px solid #004080;
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-dt {
+/* Перший елемент списку - псевдоклас :first-child */
+ul li:first-child {
   font-weight: bold;
-  color: #004080;
-  margin-top: 10px;
+  background-color: #cce6ff;
 }
 
-dd {
+/* Псевдоелементи для заголовків h3 */
+h3::before {
+  content: "✈ ";
+  color: navy;
+}
+
+h3::after {
+  content: " ✈";
+  color: navy;
+}
+
+/* Рядковий елемент - span */
+.highlight {
+  color: rgb(84, 124, 226);
+  font-weight: bold;
+  background-color: rgb(135, 203, 224);
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+/* Блочний елемент з позиціонуванням */
+#info-box {
+  position: relative;
+  top: 10px;
+  left: 15px;
+  background-color: #e0f7fa;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #00acc1;
+}
+
+/* Плаваючі блоки */
+/* Зліва */
+.float-left {
+  float: left;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Справа */
+.float-right {
+  float: right;
+  width: 250px;
+  background-color: #f9f9f9;
+  border: 1px solid #aaa;
+  padding: 10px;
   margin-left: 20px;
-  font-size: 16px;
-  color: #555;
+  border-radius: 5px;
+  text-align: left;
 }
 
+/* Очистка float, щоб контент не "спливав" */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Таблиці (якщо будеш використовувати) */
 table {
   width: 90%;
   margin: 30px auto;
@@ -161,6 +214,7 @@ tr:hover {
   background-color: #ddd;
 }
 
+/* Зображення */
 img {
   width: 100%;
   max-width: 600px;
@@ -176,34 +230,22 @@ img:hover {
   transform: scale(1.1);
 }
 
-.resized-img {
-  width: 400px;
-  height: 300px;
+/* Контекстний селектор */
+nav ul li a {
+  font-style: italic;
 }
 
-.full-img {
-  width: 800px;
-  height: 600px;
+/* Сусідній селектор */
+h1 + p {
+  font-weight: bold;
+  color: darkblue;
 }
 
-.additional-img {
-  width: 500px;
-  height: 350px;
-  display: block;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Дочірній селектор */
+nav > ul {
+  border-bottom: 2px solid white;
 }
 
-#footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-}
-
-/* дочірній селектор */
 section > h2 {
   text-decoration: underline;
 }
