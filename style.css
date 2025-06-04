@@ -1,19 +1,18 @@
-/* Загальні стилі */
-* {
-  margin: 0;
+ {
+    margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #e6f2ff;
+  background: url('background.jpg') no-repeat center center fixed, linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+  background-size: cover;
   color: #333;
   text-align: center;
   padding: 20px;
 }
 
-/* Заголовки */
 h1, h2, h3 {
   font-size: 24px !important;
   line-height: 1.5 !important;
@@ -25,32 +24,75 @@ h1, h2, h3 {
   color: #004080;
 }
 
-/* Посилання */
+nav {
+  background-color: #004080;
+  padding: 15px;
+  text-align: center;
+}
+
+nav > ul {
+  border-bottom: 2px solid white;  /* дочірній селектор */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  font-style: italic;  /* контекстний селектор */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: color 0.3s, background 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
 a {
-  color: rgb(89, 45, 194);
+  color: red !important;
   text-decoration: none;
   font-weight: bold;
 }
 
-a:link {
-  color: rgb(89, 45, 194);
-}
-
-a:visited {
-  color: gray;
-}
-
 a:hover {
-  color: blue;
+  color: #cc5500 !important;
   text-decoration: underline;
 }
 
-a:active {
-  color: rgb(72, 150, 218);
+/* сусідній селектор */
+h1 + p {
+  font-weight: bold;
+  color: darkblue;
 }
 
-/* Списки */
-ul, ol, dl {
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.special-text {
+  color: blue !important;
+  font-size: 20px;
+}
+
+ul, ol {
   font-size: 18px;
   line-height: 1.6;
   color: #333;
@@ -66,16 +108,30 @@ ol {
   list-style-type: decimal;
 }
 
-ul li, ol li, dl dt, dl dd {
+ul li, ol li {
   margin-bottom: 10px;
 }
 
-ul li:first-child {
-  font-weight: bold;
-  background-color: #cce6ff;
+dl {
+  background: #f8f9fa;
+  padding: 15px;
+  border-left: 5px solid #004080;
+  max-width: 600px;
+  margin: 20px auto;
 }
 
-/* Таблиці */
+dt {
+  font-weight: bold;
+  color: #004080;
+  margin-top: 10px;
+}
+
+dd {
+  margin-left: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
 table {
   width: 90%;
   margin: 30px auto;
@@ -104,3 +160,51 @@ tr:nth-child(even) {
 tr:hover {
   background-color: #ddd;
 }
+
+img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.resized-img {
+  width: 400px;
+  height: 300px;
+}
+
+.full-img {
+  width: 800px;
+  height: 600px;
+}
+
+.additional-img {
+  width: 500px;
+  height: 350px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* дочірній селектор */
+section > h2 {
+  text-decoration: underline;
+}
+
